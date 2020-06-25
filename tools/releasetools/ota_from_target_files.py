@@ -982,26 +982,26 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   system_progress = 0.75
 
-  script.Print("==============================");
-  script.Print("========PROJECT SAKURA========");
-  script.Print("======BASED ON LINEAGE OS=====");
-  script.Print("=============================");
-  script.Print("     By: @LordShenron        ");
-  script.Print("=============================");
+  script.Print("##############################");
+  script.Print("        PROJECT SAKURA        ");
+  script.Print("      BASED ON LINEAGE OS     ");
+  script.Print("------------------------------");
+  script.Print("      By: @LordShenron        ");
+  script.Print("##############################");
   androidver = target_info.GetBuildProp("ro.build.version.release")
   buildidn = target_info.GetBuildProp("ro.build.id")
   buildday = target_info.GetBuildProp("ro.build.date")
-  securep = target_info.GetBuildProp("ro.build.version.security_patch")
+  securep = target_info.GetBuildProp("ro.lineage.version.security_patch")
   device = target_info.GetBuildProp("ro.product.name")
   manufacturer = target_info.GetBuildProp("ro.product.manufacturer")
-  script.Print("***********************************************");
+  script.Print("**************************************");
   script.Print(" Android version  : %s"%(androidver));
   script.Print(" Security patch   : %s"%(securep));
   script.Print(" Build date       : %s"%(buildday));
-  script.Print("***********************************************");
+  script.Print("**************************************");
   script.Print(" Device           : %s"%(device));
   script.Print(" Manufacturer     : %s"%(manufacturer));
-  script.Print("***********************************************");
+  script.Print("**************************************");
   script.Print("                                         ");
 
   if OPTIONS.wipe_user_data:

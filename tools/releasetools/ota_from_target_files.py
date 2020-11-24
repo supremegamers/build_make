@@ -822,16 +822,12 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   # Dump fingerprints
   script.Print("Target: {}".format(target_info.fingerprint))
 
-  script.Print("*********************************************");
-  script.Print("┏━━━┓╋╋╋╋╋╋╋╋╋╋╋┏┓╋╋╋╋╋╋╋┏┓                  ");
-  script.Print("┃┏━┓┃╋╋╋╋┏┓╋╋╋╋┏┛┗┓╋╋╋╋╋╋┃┃                  ");
-  script.Print("┃┗━┛┣━┳━━╋╋━━┳━┻┓┏┛┏━━┳━━┫┃┏┳┓┏┳━┳━━┓        ");
-  script.Print("┃┏━━┫┏┫┏┓┣┫┃━┫┏━┫┃╋┃━━┫┏┓┃┗┛┫┃┃┃┏┫┏┓┃        ");
-  script.Print("┃┃╋╋┃┃┃┗┛┃┃┃━┫┗━┫┗┓┣━━┃┏┓┃┏┓┫┗┛┃┃┃┏┓┃        ");
-  script.Print("┗┛╋╋┗┛┗━━┫┣━━┻━━┻━┛┗━━┻┛┗┻┛┗┻━━┻┛┗┛┗┛        ");
-  script.Print("╋╋╋╋╋╋╋╋┏┛┃                                  ");
-  script.Print("╋╋╋╋╋╋╋╋┗━┛  By LordShenron                  ");
-  script.Print("*********************************************");
+  script.Print("**********************************************");
+  script.Print("             PROJECT SAKURA ROM               ");
+  script.Print("                 VERSION 5.2                  ");
+  script.Print("           Based on LineageOS 18.1            ");
+  script.Print("               By LordShenron                 ");
+  script.Print("**********************************************");
   androidver = target_info.GetBuildProp("ro.build.version.release")
   buildidn = target_info.GetBuildProp("ro.build.id")
   buildday = target_info.GetBuildProp("ro.build.date")

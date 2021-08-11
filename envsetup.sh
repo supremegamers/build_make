@@ -663,17 +663,19 @@ function lunch()
 
     if ! check_product $product
     then
-        # if we can't find a product, try to grab it off the LineageOS GitHub
+        # if we can't find a product, try to grab it off the StellarOS GitHub
         T=$(gettop)
         cd $T > /dev/null
         vendor/lineage/build/tools/roomservice.py $product
         cd - > /dev/null
+        source build/envsetup.sh
         check_product $product
     else
         T=$(gettop)
         cd $T > /dev/null
         vendor/lineage/build/tools/roomservice.py $product true
         cd - > /dev/null
+        source build/envsetup.sh
     fi
 
     TARGET_PRODUCT=$product \

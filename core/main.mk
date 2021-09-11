@@ -292,12 +292,12 @@ endif # !user_variant
 
 ifeq (true,$(strip $(enable_target_debugging)))
   # Target is more debuggable and adbd is on by default
-  ADDITIONAL_DEFAULT_PROPERTIES += ro.debuggable=1
+  # ADDITIONAL_DEFAULT_PROPERTIES += ro.debuggable=1
   # Enable Dalvik lock contention logging.
   ADDITIONAL_BUILD_PROPERTIES += dalvik.vm.lockprof.threshold=500
 else # !enable_target_debugging
   # Target is less debuggable and adbd is off by default
-  ADDITIONAL_DEFAULT_PROPERTIES += ro.debuggable=0
+  # ADDITIONAL_DEFAULT_PROPERTIES += ro.debuggable=0
 endif # !enable_target_debugging
 
 ## eng ##
@@ -313,7 +313,13 @@ endif
 ifndef is_sdk_build
   # To speedup startup of non-preopted builds, don't verify or compile the boot image.
   ADDITIONAL_BUILD_PROPERTIES += dalvik.vm.image-dex2oat-filter=extract
+  ADDITIONAL_DEFAULT_PROPERTIES += ro.debuggable=1
+  ADDITIONAL_DEFAULT_PROPERTIES += ro.debuggablr=1
 endif
+else
+  ADDITIONAL_DEFAULT_PROPERTIES += ro.debuggable=0
+	# enable userdebug features in any case
+  ADDITIONAL_DEFAULT_PROPERTIES += ro.debuggablr=1
 endif
 
 ## asan ##

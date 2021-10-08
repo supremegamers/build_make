@@ -296,7 +296,7 @@ FIND_LEAVES_EXCLUDES := $(addprefix --prune=, $(SCAN_EXCLUDE_DIRS) .repo .git)
 
 -include vendor/extra/BoardConfigExtra.mk
 ifneq ($(LINEAGE_BUILD),)
-include vendor/materium/config/BoardConfigLineage.mk
+include vendor/kasumi/config/BoardConfigLineage.mk
 endif
 
 # The build system exposes several variables for where to find the kernel

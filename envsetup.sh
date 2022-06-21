@@ -675,7 +675,6 @@ function lunch()
         cd $T > /dev/null
         vendor/kasumi/build/tools/roomservice.py $product true
         cd - > /dev/null
-        source build/envsetup.sh
     fi
 
     TARGET_PRODUCT=$product \

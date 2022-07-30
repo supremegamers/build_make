@@ -1630,7 +1630,7 @@ function source_vendorsetup() {
             find -L $dir -maxdepth 4 -name 'vendorsetup.sh' 2>/dev/null | sort); do
 
             if [[ -z "$allowed" || "$allowed_files" =~ $f ]]; then
-                echo "including $f"; . "$f"
+                echo -ne "including $f\033[0K\r"; . "$f"
             else
                 echo "ignoring $f, not in $allowed"
             fi
